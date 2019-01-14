@@ -10,8 +10,8 @@ def load_and_set_data():
     :return:
     '''
     digit_for_class = [2,3,5]
-    train = pd.read_csv('/Users/ronlitman/Ronlitman/University/Statistic/שנה א׳ - סמט׳ א׳/למידה סטטיסטית/Final Test/data/test.txt', header=None, delimiter=r"\s+")
-    test = pd.read_csv('/Users/ronlitman/Ronlitman/University/Statistic/שנה א׳ - סמט׳ א׳/למידה סטטיסטית/Final Test/data/train.txt', header=None, delimiter=r"\s+")
+    train = pd.read_csv('/Users/ronlitman/Ronlitman/University/Statistic/שנה א׳ - סמט׳ א׳/למידה סטטיסטית/Final Test/data/train.txt', header=None, delimiter=r"\s+")
+    test = pd.read_csv('/Users/ronlitman/Ronlitman/University/Statistic/שנה א׳ - סמט׳ א׳/למידה סטטיסטית/Final Test/data/test.txt', header=None, delimiter=r"\s+")
     train = train[train[0].isin(digit_for_class)].reset_index(drop=True)
     test = test[test[0].isin(digit_for_class)].reset_index(drop=True)
     return train, test
